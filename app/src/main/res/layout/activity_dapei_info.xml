@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dapei_Info_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 第一排布局 -->
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 返回按钮 -->
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dapei_back"
+                android:background="@null"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="8dp"/>
+            <!-- 标题 -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/btn_back"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="146dp"
+                android:layout_marginEnd="182dp"
+                android:text="搭配"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!-- 第二排布局 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 选择上衣和选择下装按钮 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="206dp"
+                    android:src="@drawable/dapei_vest_24" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="198dp"
+                    android:src="@drawable/dapei_vest_24" />
+
+            </LinearLayout>
+
+            <!-- 保存到相册和自动搭配按钮 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- 分享按钮 -->
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/folder_download_24" />
+
+                <Button
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dapei_share" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 第三排布局 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- "打分"文本和文本输入框 -->
+
+            <TextView
+                android:layout_width="51dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="打分" />
+
+            <TextView
+                android:id="@+id/AI_score"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="AI" />
+
+            <TextView
+                android:id="@+id/share_score"
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:text="分享" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
